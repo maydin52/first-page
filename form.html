@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo</title>
+</head>
+<body>
+    <h1>Form Demo</h1>
+
+    <button>
+        Formun dışında
+    </button>
+
+    <form action="/food">
+
+        <button type="button">Submit etmeyecek</button>
+
+        <button>
+            Gönderme!
+        </button>
+
+        <label for="username">Kullanıcı Adı Giriniz:</label>
+        <input type="text" 
+                placeholder="Kullanıcı Adı" 
+                id="username"
+                name="username">
+                
+        <label for="userpassword">Şifre Giriniz:</label>
+        <input type="password" 
+                placeholder="şifre" 
+                id="userpassword"
+                name="userpassword">
+
+        <button>
+            İstersen Gönder!
+        </button>
+
+        <label for="usercolor">Renk Seçiniz:</label>
+        <input type="color" 
+                 id="usercolor" 
+                value="#f6b73c"
+        name="usercolor">
+
+        <label for="usernumber">Sayı Giriniz:</label>
+        <input type="number" 
+        placeholder="number" 
+        id="usernumber"
+        name="usernumber"
+        min="0" max="10">
+
+        <label>
+            Yeni sayı giriniz.
+            <input type="number">
+        </label>
+
+        <button>
+            Submit
+        </button>
+
+        <button>Submit!!!</button>
+        <input type="submit" value="default submit yazar.">
+        <input type="button" value="submit yapmaz.">
+
+        <label for="a">Kullanıcı Adı Giriniz:</label>
+        <input type="text" placeholder="aranacak metin" id="a" name="q">
+        <button>aa</button>
+
+    </form>
+
+    <hr>
+
+    <form action="https://www.reddit.com/search">
+        <label for="redditsearch">Reddit'te ara</label>
+        <input type="text" id="redditsearch" name="q"/>
+        <button>Search</button>
+        <input type="submit" value="Gönder">
+    </form>
+
+    <form action="https://www.google.com/search">
+        <label for="googlesearch">Google'da ara</label>
+        <input type="text" id="googlesearch" name="q"/>
+        <button>Search</button>
+    </form>
+
+    <form action="https://www.youtube.com/results">
+        <label for="youtubesearch">Youtube'da ara</label>
+        <input type="text" id="youtubesearch" name="search_query"/>
+        <button>Search</button>
+    </form>
+
+    <hr>
+
+    <h2>Daha Fazla Input</h2>
+
+    <form action="/birds">       
+        <input type="checkbox" name="tosHizmetŞartlariKutusu" id="agree" checked>
+        <label for="agree">Kabul Ediyorum.</label>
+        <p>
+            <label for="xs">XS:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S:</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M:</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <div>
+            <label for="animal">Favori hayvanınızı seçiniz.</label>
+            <select name="animal" id="animal">
+                <option value="">Please choose an option</option>
+                <option value="fish">Balık</option>
+                <option value="dog" selected>Köpek</option>
+                <option value="cat">Kedi</option>
+            </select>
+        </div>
+        <p>
+            <label for="cheese">Peynir Miktarı:</label>
+            <input type="range" name="cheese" id="cheese" min="0" max="10" step="7" value="75"/>
+            <!-- step başladığı nokyadan ya ni 1 den itibaren geldiği için  -->
+        </p>
+        <p>
+            <label for="istek">Yorum ve Önerileriniz:</label><br>
+            <textarea name="istek" id="istek" cols="30" rows="10" placeholder="Buraya yazınız."></textarea>
+        </p>
+        
+        <button>Yolla</button>
+
+    <!-- http://127.0.0.1:5500/birds?tosHizmetŞartlariKutusu=on -->
+
+    <!-- http://127.0.0.1:5500/birds?tosHizmetŞartlariKutusu=on&size=xs -->
+
+    <!-- http://127.0.0.1:5500/birds?tosHizmetŞartlariKutusu=on&animal=fish -->
+
+    <!-- http://127.0.0.1:5500/birds?tosHizmetŞartlariKutusu=on&animal=dog&cheese=8 -->
+
+    </form>
+
+    <h2>Validations</h2>
+
+    <form action="/spare">
+        <p>
+            <label for="first">İsim Giriniz:</label>
+            <input type="text" name="first" id="first" required minlength="5" maxlength="25" />       
+        </p>
+        <p>
+            <label for="first">İsim Giriniz:</label>
+            <input type="text" name="first" id="first" required minlength="5" maxlength="25" />           
+        </p>
+        <p>
+            <label for="url">URL giriniz:</label>
+            <input type="url" id="url" required></p>
+        <button>Submit</button>
+    </form>
+
+
+
+
+</body>
+
+</html>
